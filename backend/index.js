@@ -39,6 +39,15 @@ app.post('/book', async (request, response) => {
   }
 });
 
+app.get('/books', async (request, response) => {
+  try {
+    const books = await Book.find({});
+    return response.status(200).json(books);
+  } catch (error) {
+    return response.status(500).send({ message: error.message });
+  }
+})
+
 mongoose
   .connect(mongoDbURL)
   .then(() => {
