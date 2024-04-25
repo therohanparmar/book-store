@@ -1,7 +1,9 @@
 import React from 'react'
 
-export const CreateBook = () => {
+const CreateBook = () => {
   return (
     <div>CreateBook</div>
   )
 }
+
+export default CreateBook;
